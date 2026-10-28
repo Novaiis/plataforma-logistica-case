@@ -1,22 +1,3 @@
-<!--
-=============================================================================
-  README do repositório PÚBLICO de portfólio.
-
-  COMO USAR:
-   1. Crie no GitHub um repo PÚBLICO novo — sugestão de nome:
-        Novaiis/plataforma-logistica-case
-   2. Cole este arquivo como README.md dele.
-   3. Suba as imagens em uma pasta /img (prints com DADOS FICTÍCIOS).
-   4. Preencha os [COLCHETES].
-
-  REGRA QUE NÃO SE QUEBRA: aqui NÃO ENTRA UMA LINHA DE CÓDIGO DA EMPRESA.
-  Só arquitetura, decisões e prints com dado inventado. O código fica no
-  repositório privado.
-
-  APAGUE ESTE COMENTÁRIO ANTES DE PUBLICAR.
-=============================================================================
--->
-
 # Plataforma Logística — estudo de caso
 
 > Como uma rede de atacado da construção trocou planilha, telefone e WhatsApp por
@@ -36,12 +17,12 @@ Node.js · React · Oracle · Docker
 | | |
 |---|---|
 | Módulos em produção | **13** |
-| Commits · autores | **422 · 1** |
+| Commits · autores | **539 · 1** |
 | Usuários internos | **101** |
-| Fornecedores no portal público | **263 CNPJs** · 165 grupos econômicos |
-| Agendamentos processados | **2.711** |
-| Dossiês de frete auditados | **1.035** |
-| Valor de frete auditado pela plataforma | **R$ 7,1 milhões** |
+| Fornecedores no portal público | **347 CNPJs** · 190 grupos econômicos |
+| Agendamentos processados | **3.700** |
+| Dossiês de frete auditados | **1.652** |
+| Valor de frete auditado pela plataforma | **R$ 11,5 milhões** |
 
 E o que mudou na operação:
 
@@ -54,6 +35,19 @@ E o que mudou na operação:
 
 Esses números não são estimativa: eu construí um módulo de telemetria justamente
 para medi-los.
+
+---
+
+**O que tem aqui:**
+[O problema](#o-problema) ·
+[Arquitetura](#arquitetura) ·
+[O fornecedor nunca cria conta](#1-o-fornecedor-nunca-cria-conta) ·
+[A validação que confere o tipo](#2-a-validação-que-confere-o-tipo-antes-do-conteúdo) ·
+[Três interfaces, um back-end](#3-três-interfaces-um-back-end) ·
+[Segurança](#4-segurança-para-público-interno-e-externo-no-mesmo-processo) ·
+[Decisões que eu tomaria de novo](#decisões-que-eu-tomaria-de-novo) ·
+[Trocar o processo sem parar a operação](#trocar-o-processo-sem-parar-a-operação) ·
+[O que eu faria diferente](#o-que-eu-faria-diferente)
 
 ---
 
@@ -159,7 +153,7 @@ O detalhe que eu mais gosto é o que o e-mail **não** faz: ele não pede para "
 o portal e verificar". Ele mostra o pedido, a nota, a data e dois botões. Resolve no
 celular, na rua, em oito segundos.
 
-> **263 CNPJs de fornecedores usam. Zero cadastros criados.**
+> **347 CNPJs de fornecedores usam. Zero cadastros criados.**
 
 ### 2. A validação que confere o tipo antes do conteúdo
 
